@@ -1,5 +1,11 @@
 package br.com.alura.screenmatch.modelos;
 
+/**Classe para objetos do tipo Funcionários, onde serão contidos, valores e métodos para o mesmo.
+ * @author Vinicius Grangeiro
+ * @version 1.0
+ * @since Release 0 a aplicação
+ */
+
 public class Title {
     private String name;
     private int yearOfRelease;
@@ -7,6 +13,9 @@ public class Title {
     private double sumOfRatings;
     private int totalReviews;
     private int durationInMinutes;
+
+    /** Método para retorno do nome do Titulo
+     * @return name - Nome do titulo*/
 
     public String getName() {
         return name;
