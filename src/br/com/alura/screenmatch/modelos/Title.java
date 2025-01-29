@@ -6,13 +6,24 @@ package br.com.alura.screenmatch.modelos;
  * @since Release 0 a aplicação
  */
 
-public class Title {
+public class Title implements Comparable<Title>{
     private String name;
     private int yearOfRelease;
     private boolean plusSubscription;
     private double sumOfRatings;
     private int totalReviews;
     private int durationInMinutes;
+
+    /** Construtor de Title
+     *
+     * @param name String - que recebe o nome do Titulo
+     * @param yearOfRelease int - que recebe o ano de lancamento
+     */
+
+    public Title(String name, int yearOfRelease) {
+        this.name = name;
+        this.yearOfRelease = yearOfRelease;
+    }
 
     /** Método para retorno do nome do Titulo
      * @return name - Nome do titulo*/
@@ -58,15 +69,27 @@ public class Title {
         System.out.println("Year of Release: " + yearOfRelease);
     }
 
-    public void calculateEvaluation(double rating){
+    public void evaluate(double rating){
         // Metodo para setar Nota
         sumOfRatings += rating;
         totalReviews++;
     }
 
-    public double takeMedia(){
+    public double calculateEvaluation(){
         // Metodo para pegar Media das avaliacoes
         // Esse metodo retorna um double, por isso "DOUBLE"
         return sumOfRatings / totalReviews;
+    }
+
+    // Precisamos reescrever o metodo compareTo, pois ele não compara Objetos Titulos
+
+    /** Este motodo compara Titulos
+     *
+     * @param otherTitle the object to be compared.
+     * @return
+     */
+    @Override
+    public int compareTo(Title otherTitle) {
+        return this.getName().compareTo(otherTitle.getName());
     }
 }

@@ -7,6 +7,16 @@ public class Serie extends Title{
     private int episodesForSeason;
     private int minutesForEpisode;
 
+    /** Construtor de Titulo herdado
+     *
+     * @param name String - que recebe o nome do Titulo
+     * @param yearOfRelease int - que recebe o ano de lancamento
+     */
+
+    public Serie(String name, int yearOfRelease) {
+        super(name, yearOfRelease);
+    }
+
     public int getSeasons() {
         return seasons;
     }
