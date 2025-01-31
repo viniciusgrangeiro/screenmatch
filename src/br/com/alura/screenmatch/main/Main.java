@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.main;
+
 import br.com.alura.screenmatch.modelos.Film;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -8,21 +10,21 @@ public class Main {
         // Generate a new Film
         Film myFilm1 = new Film("O Poderoso Chefão", 1970);
         myFilm1.setDurationInMinutes(180);
-        myFilm1.calculateEvaluation(10);
-        myFilm1.calculateEvaluation(5);
-        myFilm1.calculateEvaluation(0);
+        myFilm1.evaluate(10);
+        myFilm1.evaluate(5);
+        myFilm1.evaluate(0);
 
         Film myFilm2 = new Film("Senhor dos Anéis", 2001);
         myFilm2.setDurationInMinutes(180);
-        myFilm2.calculateEvaluation(10);
-        myFilm2.calculateEvaluation(7);
-        myFilm2.calculateEvaluation(4);
+        myFilm2.evaluate(10);
+        myFilm2.evaluate(7);
+        myFilm2.evaluate(4);
 
         Film myFilm3 = new Film("Star Wars", 1978);
         myFilm3.setDurationInMinutes(120);
-        myFilm3.calculateEvaluation(6);
-        myFilm3.calculateEvaluation(7);
-        myFilm3.calculateEvaluation(4);
+        myFilm3.evaluate(6);
+        myFilm3.evaluate(7);
+        myFilm3.evaluate(4);
 
         // Criando um ArrayList para guardar filmes
         ArrayList<Film> filmList = new ArrayList<>();
@@ -51,9 +53,9 @@ public class Main {
         mySerie.setSeasons(10);
         mySerie.setEpisodesForSeason(10);
         mySerie.setMinutesForEpisode(50);
-        mySerie.calculateEvaluation(10);
-        mySerie.calculateEvaluation(4);
-        mySerie.calculateEvaluation(4);
+        mySerie.evaluate(10);
+        mySerie.evaluate(4);
+        mySerie.evaluate(4);
 
 //        double averageSerie = mySerie.takeMedia();
 
