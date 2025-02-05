@@ -1,5 +1,8 @@
 package br.com.alura.screenmatch.modelos;
 
+import br.com.alura.screenmatch.exception.YearConversionException;
+import com.google.gson.annotations.SerializedName;
+
 /**Classe para objetos do tipo Funcionários, onde serão contidos, valores e métodos para o mesmo.
  * @author Vinicius Grangeiro
  * @version 1.0
@@ -23,6 +26,18 @@ public class Title implements Comparable<Title>{
     public Title(String name, int yearOfRelease) {
         this.name = name;
         this.yearOfRelease = yearOfRelease;
+    }
+
+    public Title(TitleOmdb myTitleOmdb) {
+        this.name = myTitleOmdb.title();
+
+        if (myTitleOmdb.year().length() > 4){
+            throw new YearConversionException("Não consegui converter o ano " +
+                    "pois possui mais de 04 caracteres");
+        }
+        this.yearOfRelease = Integer.valueOf(myTitleOmdb.year()); // Integer.valueOf - tenta transformar em Inteiro
+        this.durationInMinutes = Integer.valueOf(myTitleOmdb.runtime().substring(0,2));
+
     }
 
     /** Método para retorno do nome do Titulo
@@ -91,5 +106,12 @@ public class Title implements Comparable<Title>{
     @Override
     public int compareTo(Title otherTitle) {
         return this.getName().compareTo(otherTitle.getName());
+    }
+
+    @Override
+    public String toString() {
+        return "{name=" + name +
+                ", yearOfRelease=" + yearOfRelease +
+                ", runtime=" + durationInMinutes + "}";
     }
 }

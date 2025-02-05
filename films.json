@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Top Gun",
+    "YearOfRelease": 1986,
+    "PlusSubscription": false,
+    "SumOfRatings": 0.0,
+    "TotalReviews": 0,
+    "DurationInMinutes": 10
+  },
+  {
+    "Name": "Matrix",
+    "YearOfRelease": 1993,
+    "PlusSubscription": false,
+    "SumOfRatings": 0.0,
+    "TotalReviews": 0,
+    "DurationInMinutes": 60
+  },
+  {
+    "Name": "Dogville",
+    "YearOfRelease": 2003,
+    "PlusSubscription": false,
+    "SumOfRatings": 0.0,
+    "TotalReviews": 0,
+    "DurationInMinutes": 17
+  }
+]
